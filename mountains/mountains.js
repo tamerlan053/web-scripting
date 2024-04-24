@@ -1,6 +1,7 @@
 'use strict';
 
 let output = document.getElementById("output");
+let table = document.createElement("table");
 
 const MOUNTAINS = [
     {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
@@ -11,3 +12,6 @@ const MOUNTAINS = [
     {name: "Popocatepetl", height: 5465, place: "Mexico"},
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
 ];
+
+let tr = document.createElement("tr");
+let headers = ["Name", "Height", "Place"];
