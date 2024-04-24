@@ -15,3 +15,10 @@ const MOUNTAINS = [
 
 let tr = document.createElement("tr");
 let headers = ["Name", "Height", "Place"];
+
+for (let headertext of headers) {
+    let headerElement = document.createElement("th");
+    let headerText = document.createTextNode(headertext);
+    headerElement.appendChild(headerText);
+    tr.appendChild(headerElement);
+}
