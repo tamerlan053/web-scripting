@@ -22,3 +22,5 @@ for (let headertext of headers) {
     headerElement.appendChild(headerText);
     tr.appendChild(headerElement);
 }
+
+table.appendChild(tr);
