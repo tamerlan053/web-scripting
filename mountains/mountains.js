@@ -28,6 +28,14 @@ table.appendChild(tr);
 for (let mountain of MOUNTAINS) {
     let row = document.createElement("tr");
 
+        for (let key of Object.keys(mountain)) {
+        let cell = document.createElement("td");
+        let textNode = document.createTextNode(mountain[key]);
+        cell.appendChild(textNode);
+        row.append(cell);
+    }
 
     table.appendChild(row);
 }
+
+output.appendChild(table);
