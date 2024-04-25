@@ -24,3 +24,10 @@ for (let headertext of headers) {
 }
 
 table.appendChild(tr);
+
+for (let mountain of MOUNTAINS) {
+    let row = document.createElement("tr");
+
+
+    table.appendChild(row);
+}
