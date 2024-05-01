@@ -13,4 +13,11 @@ function handleClick() {
         let value2 = parseInt(inputs.namedItem("value2").value);
         let output = document.querySelector("output");
     }
+
+    let text;
+    if (!isNaN(value1) && !isNaN(value2)) {
+        text = `The product of ${value1} and ${value2} is ${value1 * value2}`
+    } else {
+        text = 'Fill in the values!';
+    }
 }
