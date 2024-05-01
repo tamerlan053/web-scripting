@@ -20,4 +20,6 @@ function handleClick() {
     } else {
         text = 'Fill in the values!';
     }
+    makeElementEmpty(output);
+    output.appendChild(document.createTextNode(text))
 }
