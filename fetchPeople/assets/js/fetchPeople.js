@@ -14,3 +14,15 @@ function loaded() {
     let buttonPutPerson = document.getElementById('button_put_person');
     buttonPutPerson.addEventListener("click", handlePutPerson);
 }
+
+function handleGetAllPeople() {
+    let url = 'http://localhost:3000/people/'
+    let output = document.getElementById("div_output");
+    makeElementEmpty(output);
+}
+
+function makeElementEmpty(element) {
+    while (element.hasChildNodes()) {
+        element.removeChild(element.firstChild);
+    }
+}
