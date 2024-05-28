@@ -40,6 +40,13 @@ function handleGetAllPeople() {
     });
 }
 
+function handleGetPerson() {
+    let url = 'http://localhost:3000/people/';
+    let id = document.getElementById("txt_id").value;
+    let output = document.getElementById("div_output");
+    makeElementEmpty(output);
+}
+
 function makeElementEmpty(element) {
     while (element.hasChildNodes()) {
         element.removeChild(element.firstChild);
