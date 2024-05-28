@@ -45,6 +45,26 @@ function handleGetPerson() {
     let id = document.getElementById("txt_id").value;
     let output = document.getElementById("div_output");
     makeElementEmpty(output);
+
+    if (id.trim() != ''){
+    fetch(url + id)
+        .then((response) => {
+            if (response.status == 200) {
+                return response.json();
+            } else {
+                throw `Error with status ${response.status}`;
+            }
+        })
+        .then((person) => {
+            let data = [];
+            data.push([person.id, person.name]);
+            let table = makeTable(data);
+            output.appendChild(table);
+        })
+        .catch((error) => {
+            output.appendChild(document.createTextNode(error));
+        });
+	}
 }
 
 function makeElementEmpty(element) {
