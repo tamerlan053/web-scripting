@@ -44,28 +44,38 @@ function handleGetPerson() {
     let url = 'http://localhost:3000/people/';
     let id = document.getElementById("txt_id").value;
     let output = document.getElementById("div_output");
+	
     makeElementEmpty(output);
-
     if (id.trim() != ''){
-    fetch(url + id)
-        .then((response) => {
-            if (response.status == 200) {
-                return response.json();
-            } else {
-                throw `Error with status ${response.status}`;
-            }
-        })
-        .then((person) => {
-            let data = [];
-            data.push([person.id, person.name]);
-            let table = makeTable(data);
-            output.appendChild(table);
-        })
-        .catch((error) => {
-            output.appendChild(document.createTextNode(error));
-        });
+	    fetch(url + id)
+    	    .then((response) => {
+    	        if (response.status == 200) {
+    	            return response.json();
+    	        } else {
+    	            throw `error with status ${response.status}`;
+    	        }
+    	    })
+    	    .then((person) => {
+    	        let data = [];
+    	        data.push([person.id, person.name]);
+    	        let table = makeTable(data);
+    	        output.appendChild(table);
+    	    })
+    	    .catch((error) => {
+    	        output.appendChild(document.createTextNode(error));
+    	    });
 	}
 }
+
+function handleGetPersoByName() {
+    let url = 'http://localhost:3000/people/';
+    let name = document.getElementById("txt_name").value; 
+    let output = document.getElementById("div_output");
+	
+    makeElementEmpty(output);
+
+}
+
 
 function makeElementEmpty(element) {
     while (element.hasChildNodes()) {
