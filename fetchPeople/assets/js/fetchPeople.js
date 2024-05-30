@@ -97,9 +97,11 @@ function handleGetPersonByName() {
 }
 
 function handlePostPerson() {
-    let url = 'http://localhost:3000/persons/';
+    let url = 'http://localhost:3000/people/';
     let output = document.getElementById("div_output");
-
+    let name = document.getElementById("txt_name").value;
+    let person = {name: name}; 
+    makeElementEmpty(output);
 }
 
 function makeElementEmpty(element) {
