@@ -67,7 +67,7 @@ function handleGetPerson() {
 	}
 }
 
-function handleGetPersoByName() {
+function handleGetPersonByName() {
     let url = 'http://localhost:3000/people/';
     let name = document.getElementById("txt_name").value; 
     let output = document.getElementById("div_output");
@@ -94,6 +94,12 @@ function handleGetPersoByName() {
                 output.appendChild(document.createTextNode(error));
             })
 	}
+}
+
+function handlePostPerson() {
+    let url = 'http://localhost:3000/persons/';
+    let output = document.getElementById("div_output");
+
 }
 
 function makeElementEmpty(element) {
