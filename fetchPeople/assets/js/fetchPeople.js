@@ -118,6 +118,15 @@ function handlePostPerson() {
                 throw `Error with status ${response.status}`;
             }
         })
+	.then((person) => {
+	    let data = [];
+	    data.push([person.id, person.name]);
+	    let table = makeTable(data);
+	    output.appendChild(table);
+	})
+	.catch((error) => {
+	    output.appendChild(document.createTextNode(error));
+	});
 }
 
 function makeElementEmpty(element) {
