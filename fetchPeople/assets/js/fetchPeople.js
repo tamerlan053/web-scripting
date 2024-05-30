@@ -102,6 +102,22 @@ function handlePostPerson() {
     let name = document.getElementById("txt_name").value;
     let person = {name: name}; 
     makeElementEmpty(output);
+    fetch(url,
+        {
+            method: "POST",
+            body: JSON.stringify(person),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+        .then((response) => {
+            if (response.status == 201) {
+                return response.json();
+            } else {
+                throw `Error with status ${response.status}`;
+            }
+        })
 }
 
 function makeElementEmpty(element) {
