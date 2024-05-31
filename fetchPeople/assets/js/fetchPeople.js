@@ -18,6 +18,7 @@ function loaded() {
 function handleGetAllPeople() {
     let url = 'http://localhost:3000/people/'
     let output = document.getElementById("div_output");
+	
     makeElementEmpty(output);
     fetch(url)
     .then((response) => {
@@ -101,6 +102,7 @@ function handlePostPerson() {
     let output = document.getElementById("div_output");
     let name = document.getElementById("txt_name").value;
     let person = {name: name}; 
+	
     makeElementEmpty(output);
     fetch(url,
         {
@@ -130,7 +132,11 @@ function handlePostPerson() {
 }
 
 function handleGetPersonByName() {
+    let url = 'http://localhost:3000/people/';
+    let name = document.getElementById("txt_name").value; 
+    let output = document.getElementById("div_output");
 	
+    makeElementEmpty(output);
 }
 
 function makeElementEmpty(element) {
