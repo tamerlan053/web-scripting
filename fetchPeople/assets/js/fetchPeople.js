@@ -10,7 +10,7 @@ function loaded() {
     let buttonPost = document.getElementById('button_post_person');
     buttonPost.addEventListener("click", handlePostPerson);
     let buttonGetPersonByName = document.getElementById('button_get_person_by_name');
-    buttonGetPersons=ByName.addEventListener("click", handleGetPersonByName);
+    buttonGetPersonByName.addEventListener("click", handleGetPersonByName);
     let buttonPutPerson = document.getElementById('button_put_person');
     buttonPutPerson.addEventListener("click", handlePutPerson);
 }
@@ -127,6 +127,10 @@ function handlePostPerson() {
 	.catch((error) => {
 	    output.appendChild(document.createTextNode(error));
 	});
+}
+
+function handleGetPersonByName() {
+	
 }
 
 function makeElementEmpty(element) {
