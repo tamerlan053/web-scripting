@@ -11,3 +11,13 @@ function fillSelect(select, options) {
         select.appendChild(optionElement);
     });
 }
+
+function handleLoad() {
+    let select_fonts = document.getElementById('select_lettertype');
+    let select_sizes = document.getElementById('select_fontsize');
+
+    fillSelect(select_fonts, fonts);
+    fillSelect(select_sizes, sizes);
+}
+
+window.addEventListener('load', handleLoad);
