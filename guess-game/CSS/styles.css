@@ -17,3 +17,11 @@
     line-height: 40px;
     text-align: center;
 }
+
+#wordInput {
+    margin: 20px;
+}
+
+output {
+    font-weight: bold;
+}
