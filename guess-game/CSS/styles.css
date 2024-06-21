@@ -1,1 +1,8 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
 
+#dice {
+    margin: 20px 0;
+}
