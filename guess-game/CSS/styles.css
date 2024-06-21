@@ -6,3 +6,14 @@
 #dice {
     margin: 20px 0;
 }
+
+#dice span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 0 5px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+}
