@@ -13,13 +13,23 @@ function rollDice() {
     makeElementEmpty(wordInput);
 
     fetch(url)
-    .then((response) => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error("Error with status: " + response.status);
-        }
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Error with status: " + response.status);
+            }
+        })
+        .then((letters) => {
+            let array = [];
+
+            letters.forEach((letter) => {
+                array.push(letter.letter);
+            })
     })
+    .catch(error => {
+        console.error("Fetch error: ", error);
+    });
 }
 
 window.addEventListener('load', init);
