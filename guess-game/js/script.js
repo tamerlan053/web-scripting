@@ -26,6 +26,13 @@ function rollDice() {
             letters.forEach((letter) => {
                 array.push(letter.letter);
             })
+
+            for (let i = 0; i < 6; i++) {
+                let randomNumber = document.createTextNode(generateRandom(array));
+                let spanElement = document.createElement('span');
+                spanElement.appendChild(randomNumber);
+                divDice.appendChild(spanElement);
+            }
     })
     .catch(error => {
         console.error("Fetch error: ", error);
