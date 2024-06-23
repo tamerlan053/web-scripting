@@ -33,6 +33,10 @@ function rollDice() {
                 spanElement.appendChild(randomNumber);
                 divDice.appendChild(spanElement);
             }
+
+            let input = document.createElement('input');
+            input.setAttribute('id', 'word');
+            input.setAttribute('placeholder', 'Enter a word');
     })
     .catch(error => {
         console.error("Fetch error: ", error);
