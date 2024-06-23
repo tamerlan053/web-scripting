@@ -11,6 +11,15 @@ function rollDice() {
     let wordInput = document.getElementById('wordInput');
     makeElementEmpty(divDice);
     makeElementEmpty(wordInput);
+
+    fetch(url)
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error("Error with status: " + response.status);
+        }
+    })
 }
 
 window.addEventListener('load', init);
