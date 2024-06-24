@@ -44,7 +44,8 @@ function rollDice() {
 }
 
 function generateRandom(array) {
-    return null;
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
 }
 
 window.addEventListener('load', init);
