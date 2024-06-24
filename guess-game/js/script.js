@@ -43,4 +43,8 @@ function rollDice() {
     });
 }
 
+function generateRandom(array) {
+    return null;
+}
+
 window.addEventListener('load', init);
