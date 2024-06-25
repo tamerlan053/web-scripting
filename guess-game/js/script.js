@@ -48,4 +48,8 @@ function generateRandom(array) {
     return array[randomIndex];
 }
 
+function checkWord() {
+    
+}
+
 window.addEventListener('load', init);
