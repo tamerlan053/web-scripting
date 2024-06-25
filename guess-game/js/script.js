@@ -49,7 +49,11 @@ function generateRandom(array) {
 }
 
 function checkWord() {
-    
+    let inputValue = document.getElementById("word").value;
+    let output = document.querySelector('output');
+    makeElementEmpty(output)
+    let spanElements = document.querySelectorAll('span');
+    let array = [];
 }
 
 window.addEventListener('load', init);
