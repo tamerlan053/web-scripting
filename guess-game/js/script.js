@@ -60,6 +60,11 @@ function checkWord() {
     }
 
     console.log(array);
+
+    if (inputValue === "") {
+        let errorNode = document.createTextNode("Please enter a word first");
+        output.appendChild(errorNode);
+    }
 }
 
 window.addEventListener('load', init);
