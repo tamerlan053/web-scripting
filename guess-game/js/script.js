@@ -54,6 +54,12 @@ function checkWord() {
     makeElementEmpty(output)
     let spanElements = document.querySelectorAll('span');
     let array = [];
+
+    for (let i = 0; i < spanElements.length; i++) {
+        array.push(spanElements[i].firstChild.nodeValue);
+    }
+
+    console.log(array);
 }
 
 window.addEventListener('load', init);
