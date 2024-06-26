@@ -66,6 +66,9 @@ function checkWord() {
         output.appendChild(errorNode);
     } else {
         let correct = isCorrect(inputValue, array);
+        if (correct) {
+        let url = `http://localhost:3000/words/?word=${inputValue}`;
+        }
     }
 }
 
