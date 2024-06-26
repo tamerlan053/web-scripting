@@ -64,6 +64,8 @@ function checkWord() {
     if (inputValue === "") {
         let errorNode = document.createTextNode("Please enter a word first");
         output.appendChild(errorNode);
+    } else {
+        let correct = isCorrect(inputValue, array);
     }
 }
 
