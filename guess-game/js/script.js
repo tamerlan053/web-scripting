@@ -77,6 +77,7 @@ function checkWord() {
                         throw new Error("Error with status: " + response.status);
                     }
                 })
+                            .then((data) => {
         }
     }
 }
