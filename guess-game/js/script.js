@@ -67,7 +67,16 @@ function checkWord() {
     } else {
         let correct = isCorrect(inputValue, array);
         if (correct) {
-        let url = `http://localhost:3000/words/?word=${inputValue}`;
+            let url = `http://localhost:3000/words/?word=${inputValue}`;
+            fetch(url)
+                .then((response) => {
+                    if (response.ok) {
+                        console.log("Connection successful");
+                        return response.json();
+                    } else {
+                        throw new Error("Error with status: " + response.status);
+                    }
+                })
         }
     }
 }
