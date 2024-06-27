@@ -77,7 +77,15 @@ function checkWord() {
                         throw new Error("Error with status: " + response.status);
                     }
                 })
-                            .then((data) => {
+                .then((data) => {
+
+                })
+                .catch(error => {
+                    console.error("Fetch error: ", error);
+                });
+        } else {
+            let errorNode = document.createTextNode(`${inputValue} contains invalid letters!`);
+            output.appendChild(errorNode);
         }
     }
 }
