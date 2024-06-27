@@ -78,7 +78,11 @@ function checkWord() {
                     }
                 })
                 .then((data) => {
-
+                    if (data.length === 0) {
+                        let errorNode = document.createTextNode(`${inputValue} is not in the list!`);
+                        output.appendChild(errorNode);
+                    }  output.appendChild(document.createTextNode(infoNode));
+                    }
                 })
                 .catch(error => {
                     console.error("Fetch error: ", error);
