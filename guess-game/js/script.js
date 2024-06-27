@@ -85,7 +85,11 @@ function checkWord() {
                     } else if (data.length === 1) {
                         let infoNode = document.createTextNode(`${inputValue} is in the list at id: ${data[0].id}`);
                         output.appendChild(infoNode);
-                    }    
+                    } else {
+                        let infoNode = `${inputValue} is in the list at ids: `;
+                        for (let i = 0; i < data.length; i++) {
+                            infoNode += data[i].id + " ";
+                        }   
                 })
                 .catch(error => {
                     console.error("Fetch error: ", error);
