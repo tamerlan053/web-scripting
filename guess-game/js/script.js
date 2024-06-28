@@ -102,7 +102,22 @@ function checkWord() {
 }
 
 function isCorrect(word, array) {
-    
+    word = word.toLowerCase();
+    let wordArray = word.split('');
+    let letters = [];
+    for (let item of array) {
+        letters.push((item.toLowerCase()));
+    }
+    let counter = 0;
+    for (let letter of wordArray) {
+        if (letters.indexOf(letter) === -1) {
+            counter += 1;
+        }
+    }
+    if (counter > 0) {
+        return false;
+    }
+    return true;
 }
 
 window.addEventListener('load', init);
