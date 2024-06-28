@@ -101,4 +101,8 @@ function checkWord() {
     }
 }
 
+function isCorrect(word, array) {
+    
+}
+
 window.addEventListener('load', init);
