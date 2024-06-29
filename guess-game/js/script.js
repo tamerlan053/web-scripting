@@ -129,4 +129,10 @@ function isCorrect(word, array) {
     return true;
 }
 
+function makeElementEmpty(element) {
+    while (element.hasChildNodes()) {
+        element.removeChild(element.firstChild);
+    }
+}
+
 window.addEventListener('load', init);
