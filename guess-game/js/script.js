@@ -44,6 +44,8 @@ function rollDice() {
 
             wordInput.appendChild(input);
             wordInput.appendChild(button);
+
+            button.addEventListener('click', checkWord);
     })
     .catch(error => {
         console.error("Fetch error: ", error);
