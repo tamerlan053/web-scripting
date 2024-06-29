@@ -41,6 +41,9 @@ function rollDice() {
             let button = document.createElement('button');
             let buttonText = document.createTextNode("Check word");
             button.appendChild(buttonText);
+
+            wordInput.appendChild(input);
+            wordInput.appendChild(button);
     })
     .catch(error => {
         console.error("Fetch error: ", error);
